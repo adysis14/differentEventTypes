@@ -1,0 +1,14 @@
+name: Daily Build
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build app
+        run: echo "Running npm install && npm build"
