@@ -1,0 +1,12 @@
+name: Pull Request Approval
+
+on:
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  notify_reviewer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Reviewer
+        run: echo "notify the pull request author of the review status"
